@@ -1,4 +1,4 @@
-# VVV Auto Bootstrap Demo 2
+# VVV Auto Bootstrap Simple
 
 This is one of a series of demonstrations of the auto-sitesetup designed to be used with [Varying Vagrants Vagrant](https://github.com/10up/varying-vagrant-vagrants/).
 
