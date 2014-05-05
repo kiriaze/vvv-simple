@@ -37,7 +37,11 @@
 		},
 		{
 			"type" 								: "git",
-			"url"  								: "git@github.com:my-github-profile/my-example-repo-name.git"
+			"url"  								: "git@github.com:kiriaze/simple-framework.git"
+		},
+		{
+			"type" 								: "git",
+			"url"  								: "git@github.com:kiriaze/simple-shortcodes.git"
 		}
 	],
 	"config"      : {
@@ -49,7 +53,8 @@
 		"wpackagist/advanced-custom-fields"		: "*",
 		"wpackagist/user-switching"				: "*",
 		"wpackagist/wp-super-cache"				: "*",
-		"my-github-profile/my-example-repo-name": "1.0.0"
+		"kiriaze/simple-framework"				: "*",
+		"kiriaze/simple-shortcodes"				: "*",
 	},
 	"require-dev" : {
 		"wpackagist/log-deprecated-notices"		: "*",
