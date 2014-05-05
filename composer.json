@@ -1,0 +1,45 @@
+{
+	"name"        : "kiriaze/vvv-simple",
+	"description" : "VVV Auto Site: WordPress stack via Composer",
+	"authors"     : [
+		{
+			"name"    							: "Constantine Kiriaze",
+			"email"   							: "hello@kiriaze.com",
+			"homepage"							: "http://kiriaze.com/"
+		}
+	],
+	"type"        : "project",
+	"minimum-stability": "dev",
+	"repositories": [
+		{
+			"type"								: "composer",
+			"url"								: "http://wpackagist.org"
+		},
+		{
+			"type"								: "composer",
+			"url"								: "http://rarst.net"
+		}
+	],
+	"config"      : {
+		"vendor-dir"							:  "vendor"
+	},
+	"require"     : {
+		"rarst/wordpress"						: "3.9.x",
+		"wpackagist/advanced-custom-fields"		: "*",
+		"wpackagist/user-switching"				: "*",
+		"wpackagist/wp-super-cache"				: "*"
+	},
+	"require-dev" : {
+		"wpackagist/log-deprecated-notices"		: "*",
+		"wpackagist/core-control"				: "*",
+		"wpackagist/monster-widget"				: "*",
+		"wpackagist/regenerate-thumbnails"		: "*",
+		"wpackagist/theme-check"				: "*",
+		"wpackagist/toolbar-theme-switcher"		: "*",
+		"wpackagist/user-switching"				: "*",
+		"wpackagist/wcm-user-language-switcher"	: "*"
+	},
+	"extra"       : {
+		"wordpress-install-dir"					: "wp",
+	}
+}
