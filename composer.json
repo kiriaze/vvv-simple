@@ -16,18 +16,40 @@
 			"url"								: "http://wpackagist.org"
 		},
 		{
-			"type"								: "composer",
-			"url"								: "http://rarst.net"
+			"type"								: "package",
+			"package": {
+				"name"    : "wordpress",
+				"type"    : "webroot",
+				"version" : "3.9",
+				"dist"    : {
+					"url"  : "http://wordpress.org/wordpress­-3.9.zip",
+					"type" : "zip"
+				},
+				"source" : {
+					"url"       : "https://github.com/WordPress/WordPress",
+					"type"      : "git",
+					"reference" : "3.9"
+				},
+				"require" : {
+					"fancyguy/webroot­installer" : "1.0.0"
+				}
+            }
+		},
+		{
+			"type" 								: "git",
+			"url"  								: "git@github.com:my-github-profile/my-example-repo-name.git"
 		}
 	],
 	"config"      : {
 		"vendor-dir"							:  "vendor"
 	},
 	"require"     : {
-		"rarst/wordpress"						: "3.9.x",
+		"wordpress"                 			: "3.9",
+		"fancyguy/webroot­installer" 			: "1.0.0",
 		"wpackagist/advanced-custom-fields"		: "*",
 		"wpackagist/user-switching"				: "*",
-		"wpackagist/wp-super-cache"				: "*"
+		"wpackagist/wp-super-cache"				: "*",
+		"my-github-profile/my-example-repo-name": "1.0.0"
 	},
 	"require-dev" : {
 		"wpackagist/log-deprecated-notices"		: "*",
@@ -40,6 +62,8 @@
 		"wpackagist/wcm-user-language-switcher"	: "*"
 	},
 	"extra"       : {
+		"webroot­dir"     						: "wp",
+		"webroot­package" 						: "wordpress",
 		"wordpress-install-dir"					: "wp",
 	}
 }
