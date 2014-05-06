@@ -16,7 +16,7 @@
     "minimum-stability": "dev",
 
     "require"     : {
-        "wordpress"                          	: "3.8",
+        "wordpress"                             : "3.8",
         "wpackagist/advanced-custom-fields"     : "*",
         "wpackagist/user-switching"             : "*",
         "wpackagist/wp-super-cache"             : "*",
@@ -41,7 +41,7 @@
     },
 
     "config"      : {
-        "vendor-dir"							:  "wp-content/vendor"
+        "vendor-dir"                            :  "wp-content/vendor"
     },
 
     "repositories": [
