@@ -19,9 +19,18 @@
         "wordpress"                             : "3.8",
         "wpackagist/advanced-custom-fields"     : "*",
         "wpackagist/user-switching"             : "*",
+        "wpackagist/w3-total-cache"             : "*",
         "wpackagist/wp-super-cache"             : "*",
+        "wpackagist/varnish-http-purge"         : "*",
+        "wpackagist/duplicate-post"             : "*",
+        "wpackagist/post-thumbnail-editor"      : "*",
+        "wpackagist/limit-login-attempts"       : "*",
+        "wpackagist/infinitewp-client-plugin"   : "*",
+        "wpackagist/wordPress-importer"         : "*",
+        "wpackagist/simple-custom-post-order"   : "*",
         "simple-framework"                      : "*",
-        "simple-shortcodes"                     : "*"
+        "simple-shortcodes"                     : "*",
+        "github-updater"                        : "*"
     },
 
     "require-dev" : {
@@ -32,7 +41,19 @@
         "wpackagist/theme-check"                : "*",
         "wpackagist/toolbar-theme-switcher"     : "*",
         "wpackagist/user-switching"             : "*",
-        "wpackagist/wcm-user-language-switcher" : "*"
+        "wpackagist/wcm-user-language-switcher" : "*",
+        "wpackagist/theme-test-drive"           : "*",
+        "wpackagist/simply-show-ids"            : "*",
+        "wpackagist/rtl-tester"                 : "*",
+        "wpackagist/rewrite-rules-inspector"    : "*",
+        "wpackagist/query-monitor"              : "*",
+        "wpackagist/p3-profiler"                : "*",
+        "wpackagist/log-viewer"                 : "*",
+        "wpackagist/developer"                  : "*",
+        "wpackagist/debug-bar"                  : "*",
+        "wpackagist/debug-bar-cron"             : "*",
+        "wpackagist/debug-bar-console"          : "*",
+        "wpackagist/debug-bar-extender"         : "*"
     },
 
     "extra"       : {
@@ -85,6 +106,19 @@
                 "version": "dev-master",
                 "source": {
                     "url": "git://github.com/kiriaze/simple-shortcodes.git",
+                    "type": "git",
+                    "reference": "origin/master"
+                }
+            }
+        },
+        {
+            "type"                              : "package",
+            "package": {
+                "name": "github-updater",
+                "type": "wordpress-plugin",
+                "version": "dev-master",
+                "source": {
+                    "url": "git://github.com/afragen/github-updater.git",
                     "type": "git",
                     "reference": "origin/master"
                 }

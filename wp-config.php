@@ -52,6 +52,10 @@ define('LOGGED_IN_SALT',   'put your unique phrase here');
 define('NONCE_SALT',       'put your unique phrase here');
 
 
+// =====================================
+// Set Simple Framework as Default theme
+// =====================================
+define('WP_DEFAULT_THEME', 'simple');
 
 
 // ========================
