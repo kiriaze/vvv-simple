@@ -16,7 +16,7 @@ Thumbs.db
 ############################
 
 wp
-wp-content
+
 
 ###################################
 # Ignore Sensitive files #
@@ -24,3 +24,4 @@ wp-content
 
 vendor
 uploads
+plugins
