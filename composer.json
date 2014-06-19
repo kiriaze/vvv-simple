@@ -25,7 +25,7 @@
         "wpackagist-plugin/post-thumbnail-editor"      : "*",
         "wpackagist-plugin/limit-login-attempts"       : "*",
         "wpackagist-plugin/wordpress-importer"         : "*",
-        "wpackagist-plugin/simple-custom-post-order"   : "*",
+        "wpackagist-plugin/intuitive-custom-post-order": "*",
         "simple-framework"                             : "*",
         "simple-shortcodes"                            : "*",
         "github-updater"                               : "*"
