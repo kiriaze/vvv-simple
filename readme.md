@@ -13,4 +13,4 @@ To get started:
 5. Run a search and replace for vvv-simple, and replace with your PROJECTNAME
 6. Followed by `vagrant up --provision`.  Perhaps a cup of tea now? The provisioning may take a while.
 
-Then you can visit [http://vvv-simple.dev/](http://vvv-simple.dev/)
+Then you can visit [http://PROJECTNAME.dev/](http://PROJECTNAME.dev/)S
