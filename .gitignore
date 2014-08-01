@@ -16,11 +16,4 @@ Thumbs.db
 ############################
 
 wp
-
-###################################
-# Ignore Sensitive files #
-###################################
-
-vendor
-uploads
-plugins
+#wp-content
