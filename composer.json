@@ -18,6 +18,7 @@
     "require"     : {
         "wordpress"                                    : "3.8",
         "wpackagist-plugin/advanced-custom-fields"     : "*",
+        "wpackagist-plugin/fg-fix-serialized-strings"  : "*",
         "wpackagist-plugin/w3-total-cache"             : "*",
         "wpackagist-plugin/wp-super-cache"             : "*",
         "wpackagist-plugin/varnish-http-purge"         : "*",
