@@ -16,43 +16,52 @@
     "minimum-stability": "dev",
 
     "require"     : {
-        "wordpress"                                    : "3.8",
-        "wpackagist-plugin/advanced-custom-fields"     : "*",
-        "wpackagist-plugin/fg-fix-serialized-strings"  : "*",
-        "wpackagist-plugin/w3-total-cache"             : "*",
-        "wpackagist-plugin/wp-super-cache"             : "*",
-        "wpackagist-plugin/varnish-http-purge"         : "*",
-        "wpackagist-plugin/duplicate-post"             : "*",
-        "wpackagist-plugin/post-thumbnail-editor"      : "*",
+        "fancyguy/webroot-installer"                   : "1.0.0",
+
+        "wordpress"                                    : "*",
+        "wpackagist-plugin/backwpup"                   : "*",
         "wpackagist-plugin/limit-login-attempts"       : "*",
+
+        "wpackagist-plugin/all-in-one-wp-security-and-firewall" : "*",
+        "wpackagist-plugin/wordfence"                           : "*",
+        "wpackagist-plugin/sucuri-scanner"                      : "*",
+        "wpackagist-plugin/bulletproof-security"                : "*",
+
+        "wpackagist-plugin/demo-data-creator"          : "*",
+        "wpackagist-plugin/bulk-content-creator"       : "*",
+
+        "wpackagist-plugin/wp-super-cache"             : "*",
+        "wpackagist-plugin/autoptimize"                : "*",
+        "wpackagist-plugin/wordpress-seo"              : "*",
+        "wpackagist-plugin/disqus-comment-system"      : "*",
+
+        "simple/simple-framework"                      : "*",
+        "simple/simple-child"                          : "*",
+        "simple/simple-shortcodes"                     : "*",
+        "simple/simple-cpt-plugin"                     : "*",
+        "simple/simple-multi-cpts"                     : "*",
+        "wpackagist-plugin/fg-fix-serialized-strings"  : "*",
+
+        "wpackagist-plugin/duplicate-post"             : "*",
         "wpackagist-plugin/wordpress-importer"         : "*",
         "wpackagist-plugin/intuitive-custom-post-order": "*",
-        "simple-framework"                             : "*",
-        "simple-shortcodes"                            : "*",
-        "github-updater"                               : "*"
+        "wpackagist-plugin/bj-lazy-load"               : "*",
+        "wpackagist-plugin/author-recommended-posts"   : "*",
+        "wpackagist-plugin/theme-my-login"             : "*",
+        "wpackagist-plugin/manual-image-crop"          : "*",
+
+        "wpackagist-plugin/varnish-http-purge"         : "*"
     },
 
     "require-dev" : {
         "wpackagist-plugin/log-deprecated-notices"     : "*",
-        "wpackagist-plugin/core-control"               : "*",
         "wpackagist-plugin/monster-widget"             : "*",
-        "wpackagist-plugin/regenerate-thumbnails"      : "*",
-        "wpackagist-plugin/theme-check"                : "*",
-        "wpackagist-plugin/toolbar-theme-switcher"     : "*",
         "wpackagist-plugin/user-switching"             : "*",
-        "wpackagist-plugin/wcm-user-language-switcher" : "*",
-        "wpackagist-plugin/theme-test-drive"           : "*",
-        "wpackagist-plugin/simply-show-ids"            : "*",
-        "wpackagist-plugin/rtl-tester"                 : "*",
         "wpackagist-plugin/rewrite-rules-inspector"    : "*",
+        "wpackagist-plugin/regenerate-thumbnails"      : "*",
+        "wpackagist-plugin/wordpress-reset"            : "*",
         "wpackagist-plugin/query-monitor"              : "*",
-        "wpackagist-plugin/p3-profiler"                : "*",
-        "wpackagist-plugin/log-viewer"                 : "*",
-        "wpackagist-plugin/developer"                  : "*",
-        "wpackagist-plugin/debug-bar"                  : "*",
-        "wpackagist-plugin/debug-bar-cron"             : "*",
-        "wpackagist-plugin/debug-bar-console"          : "*",
-        "wpackagist-plugin/debug-bar-extender"         : "*"
+        "wpackagist-plugin/debug-bar"                  : "*"
     },
 
     "extra"       : {
@@ -74,54 +83,32 @@
             "package": {
                 "type": "webroot",
                 "name": "wordpress",
-                "version": "3.8.0",
+                "version": "4.1",
                 "dist": {
-                    "url": "https://github.com/WordPress/WordPress/archive/3.8.zip",
+                    "url": "https://github.com/WordPress/WordPress/archive/4.1.zip",
                     "type": "zip"
-                },
-                "require": {
-                    "fancyguy/webroot-installer": "1.0.0"
                 }
             }
         },
         {
-            "type"                              : "package",
-            "package": {
-                "name": "simple-framework",
-                "version": "dev-master",
-                "type": "wordpress-theme",
-                "source": {
-                    "url": "git://github.com/kiriaze/simple-framework.git",
-                    "type": "git",
-                    "reference": "origin/master"
-                }
-            }
+            "type"                              : "vcs",
+            "url": "git://github.com/kiriaze/simple-framework.git"
         },
         {
-            "type"                              : "package",
-            "package": {
-                "name": "simple-shortcodes",
-                "type": "wordpress-plugin",
-                "version": "dev-master",
-                "source": {
-                    "url": "git://github.com/kiriaze/simple-shortcodes.git",
-                    "type": "git",
-                    "reference": "origin/master"
-                }
-            }
+            "type"                              : "vcs",
+            "url": "git://github.com/kiriaze/simple-child.git"
         },
         {
-            "type"                              : "package",
-            "package": {
-                "name": "github-updater",
-                "type": "wordpress-plugin",
-                "version": "dev-master",
-                "source": {
-                    "url": "git://github.com/afragen/github-updater.git",
-                    "type": "git",
-                    "reference": "origin/master"
-                }
-            }
+            "type"                              : "vcs",
+            "url": "git://github.com/kiriaze/simple-shortcodes.git"
+        },
+        {
+            "type"                              : "vcs",
+            "url": "git://github.com/kiriaze/simple-cpt-plugin.git"
+        },
+        {
+            "type"                              : "vcs",
+            "url": "git://github.com/kiriaze/simple-multi-cpts.git"
         }
     ]
 }
