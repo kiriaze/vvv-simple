@@ -15,17 +15,28 @@
  */
 
 // ** MySQL settings - You can get this info from your web host ** //
-/** The name of the database for WordPress */
-define('DB_NAME', 'vvv_simple');
 
-/** MySQL database username */
-define('DB_USER', 'root');
+$hostname = $_SERVER['HTTP_HOST']; // ex. localhost, site.dev, localhost/site etc...
 
-/** MySQL database password */
-define('DB_PASSWORD', 'root');
+switch ($hostname) {
 
-/** MySQL hostname */
-define('DB_HOST', 'localhost');
+    case 'vvv-simple.dev':
+        define('DB_NAME', 'vvv_simple');
+        define('DB_USER', 'root');
+        define('DB_PASSWORD', 'root');
+        define('DB_HOST', '127.0.0.1'); // some need localhost
+        define('DEBUG', true);
+        break;
+
+    default:
+        define('DB_NAME', '');
+        define('DB_USER', '');
+        define('DB_PASSWORD', '%RfT');
+        define('DB_HOST', 'localhost'); // some need localhost
+        define('DEBUG', false);
+        break;
+}
+
 
 /** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8');
@@ -51,18 +62,19 @@ define('SECURE_AUTH_SALT', 'put your unique phrase here');
 define('LOGGED_IN_SALT',   'put your unique phrase here');
 define('NONCE_SALT',       'put your unique phrase here');
 
-
-// =====================================
-// Set Simple Framework as Default theme
-// =====================================
-define('WP_DEFAULT_THEME', 'simple');
-
-
 // ========================
 // Custom Content Directory
 // ========================
 define( 'WP_CONTENT_DIR', dirname( __FILE__ ) . '/wp-content' );
 define( 'WP_CONTENT_URL', 'http://' . $_SERVER['HTTP_HOST'] . '/wp-content' );
+
+
+// =============================================
+// Set first theme (framework) as Default theme
+// =============================================
+$default_theme = scandir(WP_CONTENT_DIR . '/themes', 1)[0];
+define('WP_DEFAULT_THEME', $default_theme);
+
 
 // ================================================
 // You almost certainly do not want to change these
@@ -83,29 +95,36 @@ $table_prefix  = 'wp_';
 // ================================
 define( 'WPLANG', '' );
 
-// ===========
+
+// ============
 // Hide errors
-// ===========
+// ============
 ini_set( 'display_errors', 0 );
-define( 'WP_DEBUG_DISPLAY', false );
+define( 'WP_DEBUG_DISPLAY', true );
 
 
 // =================================================================
 // Debug mode
-// Debugging? Enable these. Can also enable them in local-config.php
 // =================================================================
-// define( 'SAVEQUERIES', true );
-// define( 'WP_DEBUG', true );
+define( 'SAVEQUERIES', DEBUG );
+define( 'WP_DEBUG', DEBUG );
+
+
+// =================================================================
+// Memory
+// =================================================================
+define('WP_MEMORY_LIMIT', '64M');
+
 
 // ======================================
 // Load a Memcached config if we have one
 // ======================================
 if ( file_exists( dirname( __FILE__ ) . '/memcached.php' ) )
-	$memcached_servers = include( dirname( __FILE__ ) . '/memcached.php' );
+    $memcached_servers = include( dirname( __FILE__ ) . '/memcached.php' );
 
 // ===================
 // Bootstrap WordPress
 // ===================
 if ( !defined( 'ABSPATH' ) )
-	define( 'ABSPATH', dirname( __FILE__ ) . '/wp/' );
+    define( 'ABSPATH', dirname( __FILE__ ) . '/wp/' );
 require_once( ABSPATH . 'wp-settings.php' );

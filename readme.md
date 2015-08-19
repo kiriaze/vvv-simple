@@ -14,4 +14,4 @@ To get started:
 6. Followed by `vagrant up --provision`.  Perhaps a cup of tea now? The provisioning may take a while.
 7. Upload dummy content xml
 
-Then you can visit [http://PROJECTNAME.dev/](http://PROJECTNAME.dev/)S
+Then you can visit [http://PROJECTNAME.dev/](http://PROJECTNAME.dev/)
