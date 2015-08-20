@@ -72,7 +72,7 @@ define( 'WP_CONTENT_URL', 'http://' . $_SERVER['HTTP_HOST'] . '/wp-content' );
 // =============================================
 // Set first theme (framework) as Default theme
 // =============================================
-$default_theme = scandir(WP_CONTENT_DIR . '/themes', 1)[0];
+$default_theme = scandir(WP_CONTENT_DIR . '/themes', 1)[1];
 define('WP_DEFAULT_THEME', $default_theme);
 
 
